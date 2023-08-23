@@ -24,7 +24,7 @@
 body {
     align-items: center;
     background-color: var(--white);
-    background: url("./bg.jpg");
+    background: url("./resources/bg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@ body {
 }
 .overlay {
     background-color: var(--lightblue);
-    background: url("./bg.jpg");
+    background: url("./resources/bg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -197,6 +197,45 @@ body {
 #signIn, #signUp{
     display: none;
 }
+.outer_btns{
+    padding-inline: 1rem;
+}
+.outer_btns #signUp{
+    margin-top: -3rem;
+}
+.grid{
+    display: grid;
+    place-items: center;
+}
+.image_section{
+    position: relative;
+}
+.image_section span{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px #333;
+    overflow: hidden;
+    position: relative;
+}
+.image_section span img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.image_section label{
+    position: absolute;
+    bottom: -.5rem;
+    right: -.5rem;
+}
+.image_section label .icon{
+    cursor: pointer;
+}
+.image_section input{
+    width: .1rem;
+    height: .1rem;
+}
 
 @media screen and (max-width: 500px) {
     .container{
@@ -214,14 +253,18 @@ body {
         width: 100%;
         transform: translateX(100%);
     }
-    .overlay{
+    .container__overlay{
         display: none;
+    }
+    .container{
+        height: 70vh;
     }
     .container__form{
         width: 100%;
     }
     .form{
         padding: 0 1rem;
+        height: 90%;
     }
 }
 
